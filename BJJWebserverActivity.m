@@ -21,12 +21,15 @@
 
 @implementation BJJWebserverActivity
 
+@synthesize activityImage;
+@synthesize activityTitle;
 
 - (instancetype)init {
     self = [super init];
     
     if (self) {
-        self.activityTitle = NSLocalizedStringWithDefaultValue(@"SHAVE_VIA_WEBSERVER_DEFAULT_TITLE", nil, [NSBundle mainBundle], @"Share via Webserver", @"");
+       
+        self.activityTitle = NSLocalizedStringWithDefaultValue(@"SHARE_VIA_WEBSERVER_DEFAULT_TITLE", nil, [NSBundle mainBundle], @"Share via Webserver", @"");
         
         _httpServer = [[HTTPServer alloc] init];
         
